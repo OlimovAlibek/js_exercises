@@ -14,21 +14,22 @@ describe('Exercise @1', () => {
     it('isStringEmpty(\'abc\'); => false', () => {
       expect(isStringEmpty('abc')).to.equal(false);
     });
-
+  
     it('isStringEmpty(\'\'); => true', () => {
-      expect(isStringEmpty('abc')).to.equal(true);
+      expect(isStringEmpty('')).to.equal(true); 
     });
-
+  
     it('isStringEmpty(\'   \'); => true', () => {
-      expect(isStringEmpty('abc')).to.equal(true);
+      expect(isStringEmpty('   ')).to.equal(true);
     });
-
+  
     it('isStringEmpty(); => throws error', () => {
       expect(() => {
         isStringEmpty();
-      }).to.throw('text must be defined');
+      }).to.throw('text must be defined'); 
     });
   });
+  
 
   describe('truncateString Function', () => {
     it('truncateString(\'Hello World\', 2); => \'He\'', () => {
@@ -37,9 +38,9 @@ describe('Exercise @1', () => {
 
     it('truncateString(\'Hello world\'); => throws error "Please specify number of characters to extract"', () => {
       expect(() => {
-        truncateString();
+        truncateString('Hello world');
       }).to.throw('Please specify number of characters to extract');
-    });
+    });    
 
     it('truncateString(\'\'); => throws error "text must have at least one character"', () => {
       expect(() => {
@@ -54,8 +55,8 @@ describe('Exercise @1', () => {
     });
 
     it("createHashTag('i love javascript'); => '#iLoveJavascript'", () => {
-      expect(createHashTag('Hello World')).to.equal('#iLoveJavascript');
-    });
+      expect(createHashTag('i love javascript')).to.equal('#iLoveJavascript');
+    });    
 
     it("createHashTag(''); => throws error 'Text should have at least three characters'", () => {
       expect(() => {
